@@ -7,12 +7,18 @@
 //
 
 #import "M2AppDelegate.h"
+#import "M2SkillzLegacyDelegate.h"
 
 @implementation M2AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  return YES;
+    if ([M2SkillzLegacyDelegate canLoadSkillz]) {
+        [M2SkillzLegacyDelegate loadSkillz];
+        [M2SkillzLegacyDelegate initializeSkillz];
+    }
+    
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -40,6 +46,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

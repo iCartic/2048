@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface M2ViewController : UIViewController
+@interface M2ViewController : UIViewController  <UIAlertViewDelegate>
 
 - (void)updateScore:(NSInteger)score;
-
 - (void)endGame:(BOOL)won;
+
+- (void)startNewGame;
+- (IBAction)restart:(id)sender;
 
 @end

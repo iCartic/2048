@@ -10,6 +10,7 @@
 #import "M2Grid.h"
 #import "M2Tile.h"
 #import "M2Scene.h"
+#import "M2SkillzLegacyDelegate.h"
 
 @interface M2Grid ()
 
@@ -89,7 +90,12 @@
 - (M2Cell *)randomAvailableCell {
   NSArray *availableCells = [self availableCells];
   if (availableCells.count) {
-    return [availableCells objectAtIndex:arc4random_uniform((int)availableCells.count)];
+      if([M2SkillzLegacyDelegate isTournamentInProgress]) {
+          M2Tile *tile = [[M2Tile alloc] init];
+          return [availableCells objectAtIndex:[tile skillzRandom:((int)availableCells.count)]];
+      } else {
+          return [availableCells objectAtIndex:arc4random_uniform((int)availableCells.count)];
+      }
   }
   return nil;
 }

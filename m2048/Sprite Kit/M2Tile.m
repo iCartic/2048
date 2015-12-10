@@ -10,6 +10,7 @@
 
 #import "M2Tile.h"
 #import "M2Cell.h"
+#import "M2SkillzLegacyDelegate.h"
 
 typedef void (^M2Block)();
 
@@ -24,6 +25,10 @@ typedef void (^M2Block)();
   M2Block _pendingBlock;
 }
 
+- (NSInteger)skillzRandom:(NSInteger)max
+{
+    return [M2SkillzLegacyDelegate getRandomNumberWithMin:0 andMax:max];
+}
 
 # pragma mark - Tile creation
 
@@ -64,8 +69,20 @@ typedef void (^M2Block)();
     // For Fibonacci game, which is way harder than 2048 IMO, 40 seems to be the easiest number.
     // 90 definitely won't work, as we need approximately equal number of 2 and 3 to make the
     // game remotely makes sense.
-    if (GSTATE.gameType == M2GameTypeFibonacci) self.level = arc4random_uniform(100) < 40 ? 1 : 2;
-    else self.level = arc4random_uniform(100) < 95 ? 1 : 2;
+      if (GSTATE.gameType == M2GameTypeFibonacci) {
+          if([M2SkillzLegacyDelegate isTournamentInProgress]) {
+              self.level = [self skillzRandom:100] < 40 ? 1 : 2;
+          } else {
+              self.level = arc4random_uniform(100) < 40 ? 1 : 2;
+          }
+
+      } else {
+          if([M2SkillzLegacyDelegate isTournamentInProgress]) {
+              self.level = [self skillzRandom:100] < 95 ? 1 : 2;
+          } else {
+              self.level = arc4random_uniform(100) < 95 ? 1 : 2;
+          }
+      }
     
     [self refreshValue];
   }

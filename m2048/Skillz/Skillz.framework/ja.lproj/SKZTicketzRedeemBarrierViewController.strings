@@ -1,0 +1,87 @@
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "0A3-Lz-A95"; */
+"0A3-Lz-A95.text" = "Usernameさん ";
+
+/* Class = "UILabel"; text = "Users must be at least 18 years old to participate in Ticketz.\nBy tapping 'submit' I agree to the Terms of Service"; ObjectID = "2Sk-ge-8Sd"; */
+"2Sk-ge-8Sd.text" = "Ticketzに参加するユーザーは少なくとも18歳である必要があります。\nタップすると私はサービス規約に同意「提出」";
+
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "2iM-JF-HJ3"; */
+"2iM-JF-HJ3.text" = "Usernameさん ";
+
+/* Class = "UILabel"; text = "We need your Email and Age to redeem your prize."; ObjectID = "BeW-L0-zrE"; */
+"BeW-L0-zrE.text" = "あなたの賞品を買い戻すためには、あなたのＥメールアドレスと年齢が必要です。";
+
+/* Class = "UILabel"; text = "We sent an email to:"; ObjectID = "Bem-1l-a0a"; */
+"Bem-1l-a0a.text" = "Ｅメールを次のあて先に送付しました：";
+
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "FW6-MF-ARE"; */
+"FW6-MF-ARE.text" = "Usernameさん ";
+
+/* Class = "UITextField"; placeholder = "Enter Your Email"; ObjectID = "FYY-ai-pwv"; */
+"FYY-ai-pwv.placeholder" = "メールアドレスを入力";
+
+/* Class = "UILabel"; text = "Please click on the link in the email to verify and continue."; ObjectID = "GY7-yG-jIn"; */
+"GY7-yG-jIn.text" = "Ｅメールのリンクをクリックして確認し、継続してください。";
+
+/* Class = "UILabel"; text = "We sent an email to:"; ObjectID = "HIz-Ja-RY9"; */
+"HIz-Ja-RY9.text" = "Ｅメールを次のあて先に送付しました：";
+
+/* Class = "UITextField"; placeholder = "MM / DD / YYYY"; ObjectID = "Hhg-HR-nZg"; */
+"Hhg-HR-nZg.placeholder" = "月 /日 / 西暦";
+
+/* Class = "UIButton"; normalTitle = "GO TO MY ACCOUNT"; ObjectID = "IJB-jr-eth"; */
+"IJB-jr-eth.normalTitle" = "マイアカウントへ";
+
+/* Class = "UILabel"; text = "Please go to 'My Account' and add your address."; ObjectID = "KNM-rX-iZ9"; */
+"KNM-rX-iZ9.text" = "「マイアカウント」に移動して、あなたのアドレスを追加してください。";
+
+/* Class = "UILabel"; text = "To receive your prize we need your address to send the item."; ObjectID = "LH8-Ix-91K"; */
+"LH8-Ix-91K.text" = "賞品を受け取るには、あなたのアイテム送付先の住所が必要です。";
+
+/* Class = "UIButton"; normalTitle = "RESEND"; ObjectID = "O0a-cO-bJQ"; */
+"O0a-cO-bJQ.normalTitle" = "再送";
+
+/* Class = "UITextField"; placeholder = "MM / DD / YYYY"; ObjectID = "R54-Ne-FOh"; */
+"R54-Ne-FOh.placeholder" = "月 /日 / 西暦";
+
+/* Class = "UITextField"; placeholder = "Enter Your Email"; ObjectID = "RxY-L6-0sn"; */
+"RxY-L6-0sn.placeholder" = "メールアドレスを入力";
+
+/* Class = "UILabel"; text = "To receive your prize we need your address to send the item."; ObjectID = "W9D-hz-kaU"; */
+"W9D-hz-kaU.text" = "賞品を受け取るには、あなたのアイテム送付先の住所が必要です。";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "XJk-hN-5jd"; */
+"XJk-hN-5jd.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "Verify Your Email"; ObjectID = "ZR4-cA-Fe1"; */
+"ZR4-cA-Fe1.text" = "Eメールを確認";
+
+/* Class = "UILabel"; text = "Verify Your Email"; ObjectID = "eD2-Xh-CiV"; */
+"eD2-Xh-CiV.text" = "Eメールを確認";
+
+/* Class = "UIButton"; normalTitle = "GO TO MY ACCOUNT"; ObjectID = "eWa-7g-b18"; */
+"eWa-7g-b18.normalTitle" = "マイアカウントへ";
+
+/* Class = "UILabel"; text = "Please go to 'My Account' and add your address."; ObjectID = "grl-Ii-M9b"; */
+"grl-Ii-M9b.text" = "「マイアカウント」に移動して、あなたのアドレスを追加してください。";
+
+/* Class = "UILabel"; text = "Please click on the link in the email to verify and continue."; ObjectID = "izX-by-uCc"; */
+"izX-by-uCc.text" = "Ｅメールのリンクをクリックして確認し、継続してください。";
+
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "pIk-l3-RPW"; */
+"pIk-l3-RPW.text" = "Usernameさん ";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "pdu-wp-c1u"; */
+"pdu-wp-c1u.normalTitle" = "OK";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "reX-l3-BgJ"; */
+"reX-l3-BgJ.normalTitle" = "送信";
+
+/* Class = "UILabel"; text = "We need your Email and Age to redeem your prize."; ObjectID = "x3E-EI-WdO"; */
+"x3E-EI-WdO.text" = "あなたの賞品を買い戻すためには、あなたのＥメールアドレスと年齢が必要です。";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "xyp-mu-Rbv"; */
+"xyp-mu-Rbv.normalTitle" = "送信";
+
+/* Class = "UIButton"; normalTitle = "RESEND"; ObjectID = "z7o-T1-lFx"; */
+"z7o-T1-lFx.normalTitle" = "再送";
+

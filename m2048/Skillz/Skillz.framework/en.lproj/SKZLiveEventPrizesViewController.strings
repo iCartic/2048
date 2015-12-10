@@ -1,0 +1,11 @@
+/* Class = "UILabel"; text = "Don't show this again"; ObjectID = "CE7-9x-UVQ"; */
+"CE7-9x-UVQ.text" = "Don't show this again";
+
+/* Class = "UILabel"; text = "Prizes Awarded"; ObjectID = "Ifa-K4-eV7"; */
+"Ifa-K4-eV7.text" = "Prizes Awarded";
+
+/* Class = "UILabel"; text = "How to Win"; ObjectID = "Pvs-LI-cVf"; */
+"Pvs-LI-cVf.text" = "How to Win";
+
+/* Class = "UIButton"; normalTitle = "OK, I'M READY"; ObjectID = "ZJo-hR-BBK"; */
+"ZJo-hR-BBK.normalTitle" = "OK, I'M READY";
