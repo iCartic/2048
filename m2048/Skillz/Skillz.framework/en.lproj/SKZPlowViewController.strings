@@ -1,0 +1,20 @@
+/* Class = "UIButton"; accessibilityLabel = "PLOW Next"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.accessibilityLabel" = "PLOW Next";
+
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "PLAY AGAIN";
+
+/* Class = "UIButton"; accessibilityLabel = "PLOW Next"; ObjectID = "dQr-Te-Nt0"; */
+"dQr-Te-Nt0.accessibilityLabel" = "PLOW Next";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "dQr-Te-Nt0"; */
+"dQr-Te-Nt0.normalTitle" = "SHARE";
+
+/* Class = "UIButton"; accessibilityLabel = "PLOW Next"; ObjectID = "ecJ-BI-cK7"; */
+"ecJ-BI-cK7.accessibilityLabel" = "PLOW Next";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "ecJ-BI-cK7"; */
+"ecJ-BI-cK7.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "YOU PLACED"; ObjectID = "oGj-Ms-jwf"; */
+"oGj-Ms-jwf.text" = "YOU PLACED";

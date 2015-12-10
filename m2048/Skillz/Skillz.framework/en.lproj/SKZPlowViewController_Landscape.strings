@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "THE WINNER WILL GET"; ObjectID = "BdM-Zh-JNh"; */
+"BdM-Zh-JNh.text" = "THE WINNER WILL GET";
+
+/* Class = "UIButton"; accessibilityLabel = "PLOW Next"; ObjectID = "C8v-v2-QUa"; */
+"C8v-v2-QUa.accessibilityLabel" = "PLOW Next";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "C8v-v2-QUa"; */
+"C8v-v2-QUa.normalTitle" = "SHARE";
+
+/* Class = "UIButton"; accessibilityLabel = "PLOW Next"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.accessibilityLabel" = "PLOW Next";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "400"; ObjectID = "Mxk-eM-9Mf"; */
+"Mxk-eM-9Mf.text" = "400";
+
+/* Class = "UIButton"; accessibilityLabel = "PLOW Next"; ObjectID = "NW8-de-dVd"; */
+"NW8-de-dVd.accessibilityLabel" = "PLOW Next";
+
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "NW8-de-dVd"; */
+"NW8-de-dVd.normalTitle" = "PLAY AGAIN";
+
+/* Class = "UILabel"; text = "400"; ObjectID = "Sl0-Q6-RXu"; */
+"Sl0-Q6-RXu.text" = "400";
+
+/* Class = "UILabel"; text = "YOU PLACED"; ObjectID = "oGj-Ms-jwf"; */
+"oGj-Ms-jwf.text" = "YOU PLACED";
+
+/* Class = "UILabel"; text = "+$10.00"; ObjectID = "xq3-wN-e5C"; */
+"xq3-wN-e5C.text" = "+$10.00";

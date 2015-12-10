@@ -1,0 +1,15 @@
+
+/* Class = "UIView"; accessibilityLabel = "Leaderboard Unlocked"; ObjectID = "1"; */
+"1.accessibilityLabel" = "Leaderboard Unlocked";
+
+/* Class = "UIButton"; accessibilityLabel = "Unlocked Next"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.accessibilityLabel" = "Unlocked Next";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "WELCOME TO LEAGUES"; ObjectID = "uB1-sG-Wbh"; */
+"uB1-sG-Wbh.text" = "WELCOME TO LEAGUES";
+
+/* Class = "UILabel"; text = "Medals determine your rank in the league"; ObjectID = "xWR-mv-5O4"; */
+"xWR-mv-5O4.text" = "Medals determine your rank in the league";

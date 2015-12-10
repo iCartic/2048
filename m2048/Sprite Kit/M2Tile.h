@@ -63,4 +63,6 @@
  */
 - (void)removeAnimated:(BOOL)animated;
 
+- (NSInteger)skillzRandom:(NSInteger)max;
+
 @end

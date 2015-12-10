@@ -1,0 +1,18 @@
+/* Class = "UILabel"; text = "BONUS BUCKS"; ObjectID = "8Zo-Cg-7hF"; */
+"8Zo-Cg-7hF.text" = "额外奖励钱款";
+
+/* Class = "UILabel"; text = "REDEEMED!"; ObjectID = "98f-FF-PRR"; */
+"98f-FF-PRR.text" = "已兑换！";
+
+/* Class = "UILabel"; text = "$100"; ObjectID = "Obj-20-MtM"; */
+"Obj-20-MtM.text" = "$100";
+
+/* Class = "UILabel"; text = "SEA DOO SP"; ObjectID = "WEc-2o-Zcr"; */
+"WEc-2o-Zcr.text" = "喜度火花";
+
+/* Class = "UILabel"; text = "SPARK"; ObjectID = "nDI-8O-tn9"; */
+"nDI-8O-tn9.text" = "火花";
+
+/* Class = "UILabel"; text = "SEA DOO"; ObjectID = "yMg-SR-VAY"; */
+"yMg-SR-VAY.text" = "喜度";
+

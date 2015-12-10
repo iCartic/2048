@@ -1,0 +1,17 @@
+/* Class = "UIButton"; normalTitle = "SUBMIT PAYMENT"; ObjectID = "CcU-t7-zBl"; */
+"CcU-t7-zBl.normalTitle" = "SUBMIT PAYMENT";
+
+/* Class = "UIButton"; normalTitle = "Credit Card"; ObjectID = "aMp-aK-dgm"; */
+"aMp-aK-dgm.normalTitle" = "Credit Card";
+
+/* Class = "UILabel"; text = "NEW BALANCE:"; ObjectID = "ocw-zL-Laf"; */
+"ocw-zL-Laf.text" = "NEW BALANCE:";
+
+/* Class = "UILabel"; text = "TOTAL ENTRIES:"; ObjectID = "4Gb-1b-e8G"; */
+"4Gb-1b-e8G.text" = "TOTAL ENTRIES:";
+
+/* Class = "UILabel"; text = "ENTRIES TO PURCHASE:"; ObjectID = "B5l-Ak-hAc"; */
+"B5l-Ak-hAc.text" = "ENTRIES TO PURCHASE:";
+
+/* Class = "UILabel"; text = "PURCHASE AMOUNT:"; ObjectID = "WLk-G3-Ox5"; */
+"WLk-G3-Ox5.text" = "PURCHASE AMOUNT:";

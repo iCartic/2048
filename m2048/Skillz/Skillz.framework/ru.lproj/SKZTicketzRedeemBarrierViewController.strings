@@ -1,0 +1,87 @@
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "0A3-Lz-A95"; */
+"0A3-Lz-A95.text" = "Привет, пользователь ";
+
+/* Class = "UILabel"; text = "Users must be at least 18 years old to participate in Ticketz.\nBy tapping 'submit' I agree to the Terms of Service"; ObjectID = "2Sk-ge-8Sd"; */
+"2Sk-ge-8Sd.text" = "Для участия в Ticketz пользователям должно исполниться 18 лет.\nПри нажатии 'Отправить' я соглашаюсь с Условиями предоставления услуг";
+
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "2iM-JF-HJ3"; */
+"2iM-JF-HJ3.text" = "Привет, пользователь ";
+
+/* Class = "UILabel"; text = "We need your Email and Age to redeem your prize."; ObjectID = "BeW-L0-zrE"; */
+"BeW-L0-zrE.text" = "Для выдачи приза необходимы адрес электронной почты и сведения о возрасте.";
+
+/* Class = "UILabel"; text = "We sent an email to:"; ObjectID = "Bem-1l-a0a"; */
+"Bem-1l-a0a.text" = "Сообщение отправлено по адресу:";
+
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "FW6-MF-ARE"; */
+"FW6-MF-ARE.text" = "Привет, пользователь ";
+
+/* Class = "UITextField"; placeholder = "Enter Your Email"; ObjectID = "FYY-ai-pwv"; */
+"FYY-ai-pwv.placeholder" = "Введите адрес электронной почты";
+
+/* Class = "UILabel"; text = "Please click on the link in the email to verify and continue."; ObjectID = "GY7-yG-jIn"; */
+"GY7-yG-jIn.text" = "Перейдите по ссылке в сообщении для подтверждения и продолжения.";
+
+/* Class = "UILabel"; text = "We sent an email to:"; ObjectID = "HIz-Ja-RY9"; */
+"HIz-Ja-RY9.text" = "Сообщение отправлено по адресу:";
+
+/* Class = "UITextField"; placeholder = "MM / DD / YYYY"; ObjectID = "Hhg-HR-nZg"; */
+"Hhg-HR-nZg.placeholder" = "ММ/ДД/ГГГГ";
+
+/* Class = "UIButton"; normalTitle = "GO TO MY ACCOUNT"; ObjectID = "IJB-jr-eth"; */
+"IJB-jr-eth.normalTitle" = "ПЕРЕЙТИ К УЧЕТНОЙ ЗАПИСИ";
+
+/* Class = "UILabel"; text = "Please go to 'My Account' and add your address."; ObjectID = "KNM-rX-iZ9"; */
+"KNM-rX-iZ9.text" = "Пожалуйста, перейдите на 'Мой счет' и добавьте ваш адрес.";
+
+/* Class = "UILabel"; text = "To receive your prize we need your address to send the item."; ObjectID = "LH8-Ix-91K"; */
+"LH8-Ix-91K.text" = "Для получения приза необходимо сообщить адрес доставки.";
+
+/* Class = "UIButton"; normalTitle = "RESEND"; ObjectID = "O0a-cO-bJQ"; */
+"O0a-cO-bJQ.normalTitle" = "ОТПРАВИТЬ ПОВТОРНО";
+
+/* Class = "UITextField"; placeholder = "MM / DD / YYYY"; ObjectID = "R54-Ne-FOh"; */
+"R54-Ne-FOh.placeholder" = "ММ / ДД / ГГГГ";
+
+/* Class = "UITextField"; placeholder = "Enter Your Email"; ObjectID = "RxY-L6-0sn"; */
+"RxY-L6-0sn.placeholder" = "Введите адрес электронной почты";
+
+/* Class = "UILabel"; text = "To receive your prize we need your address to send the item."; ObjectID = "W9D-hz-kaU"; */
+"W9D-hz-kaU.text" = "Для получения приза необходимо сообщить адрес доставки.";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "XJk-hN-5jd"; */
+"XJk-hN-5jd.normalTitle" = "ОК";
+
+/* Class = "UILabel"; text = "Verify Your Email"; ObjectID = "ZR4-cA-Fe1"; */
+"ZR4-cA-Fe1.text" = "Подтвердите адрес электронной почты";
+
+/* Class = "UILabel"; text = "Verify Your Email"; ObjectID = "eD2-Xh-CiV"; */
+"eD2-Xh-CiV.text" = "Подтвердите адрес электронной почты";
+
+/* Class = "UIButton"; normalTitle = "GO TO MY ACCOUNT"; ObjectID = "eWa-7g-b18"; */
+"eWa-7g-b18.normalTitle" = "ПЕРЕЙТИ К УЧЕТНОЙ ЗАПИСИ";
+
+/* Class = "UILabel"; text = "Please go to 'My Account' and add your address."; ObjectID = "grl-Ii-M9b"; */
+"grl-Ii-M9b.text" = "Пожалуйста, перейдите на 'Мой счет' и добавьте ваш адрес.";
+
+/* Class = "UILabel"; text = "Please click on the link in the email to verify and continue."; ObjectID = "izX-by-uCc"; */
+"izX-by-uCc.text" = "Перейдите по ссылке в сообщении для подтверждения и продолжения.";
+
+/* Class = "UILabel"; text = "Hey Username, "; ObjectID = "pIk-l3-RPW"; */
+"pIk-l3-RPW.text" = "Привет, пользователь ";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "pdu-wp-c1u"; */
+"pdu-wp-c1u.normalTitle" = "ОК";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "reX-l3-BgJ"; */
+"reX-l3-BgJ.normalTitle" = "ОТПРАВИТЬ";
+
+/* Class = "UILabel"; text = "We need your Email and Age to redeem your prize."; ObjectID = "x3E-EI-WdO"; */
+"x3E-EI-WdO.text" = "Для выдачи приза необходимы адрес электронной почты и сведения о возрасте.";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "xyp-mu-Rbv"; */
+"xyp-mu-Rbv.normalTitle" = "ОТПРАВИТЬ";
+
+/* Class = "UIButton"; normalTitle = "RESEND"; ObjectID = "z7o-T1-lFx"; */
+"z7o-T1-lFx.normalTitle" = "ОТПРАВИТЬ ПОВТОРНО";
+
