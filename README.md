@@ -4,10 +4,6 @@ This fork is a fully fleshed out example of how to integrate Skillz with a game 
 
 Please refer to [documentation available here](https://cdn.skillz.com/doc/developer/) for more information on how you can launch your own Skillz powered game. 
 
-<p align="center">
-  <img src="http://a4.mzstatic.com/us/r30/Purple4/v4/a4/f8/af/a4f8af1d-3878-0817-859d-de76bae169c7/screen568x568.jpeg" alt="Screenshot"/>
-</p>
-
 
 #### Contributors
 
