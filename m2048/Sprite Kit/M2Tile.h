@@ -63,6 +63,11 @@
  */
 - (void)removeAnimated:(BOOL)animated;
 
-- (NSInteger)skillzRandom:(NSInteger)max;
+/**
+ * Returns a random value in between 0 and the max param
+ *
+ * @param Maximum value for the returned randomed number
+ */
++ (NSInteger)getRandomNumber:(NSInteger)max;
 
 @end

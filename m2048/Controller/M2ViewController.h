@@ -15,6 +15,5 @@
 - (void)endGame:(BOOL)won;
 
 - (void)startNewGame;
-- (IBAction)restart:(id)sender;
 
 @end

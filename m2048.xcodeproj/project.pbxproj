@@ -32,8 +32,6 @@
 		24C4516818DD64A90001FCFD /* M2GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516718DD64A90001FCFD /* M2GridView.m */; };
 		24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516F18DFF10B0001FCFD /* M2ScoreView.m */; };
 		24C4518118E265390001FCFD /* M2Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4518018E265390001FCFD /* M2Overlay.m */; };
-		D97B327D1C1A225900877096 /* M2SkillzLegacyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D97B327C1C1A225900877096 /* M2SkillzLegacyDelegate.m */; };
-		D97B32811C1A23A800877096 /* Skillz.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D97B327E1C1A23A300877096 /* Skillz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D97B328E1C1A32F800877096 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B328D1C1A32F800877096 /* PassKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -54,7 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D97B32811C1A23A800877096 /* Skillz.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,10 +83,10 @@
 		2443DC9918D663FC00C920C1 /* M2GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2GameManager.m; sourceTree = "<group>"; };
 		2443DCA118D6649500C920C1 /* M2Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Theme.h; sourceTree = "<group>"; };
 		2443DCA218D6649500C920C1 /* M2Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Theme.m; sourceTree = "<group>"; };
-		2443DCA418D66CCC00C920C1 /* M2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ViewController.h; sourceTree = "<group>"; };
-		2443DCA518D66CCC00C920C1 /* M2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ViewController.m; sourceTree = "<group>"; };
-		2443DCAD18D6C18400C920C1 /* M2Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Tile.h; sourceTree = "<group>"; };
-		2443DCAE18D6C18400C920C1 /* M2Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Tile.m; sourceTree = "<group>"; };
+		2443DCA418D66CCC00C920C1 /* M2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M2ViewController.h; path = Controller/M2ViewController.h; sourceTree = "<group>"; };
+		2443DCA518D66CCC00C920C1 /* M2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M2ViewController.m; path = Controller/M2ViewController.m; sourceTree = "<group>"; };
+		2443DCAD18D6C18400C920C1 /* M2Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M2Tile.h; path = "Sprite Kit/M2Tile.h"; sourceTree = "<group>"; };
+		2443DCAE18D6C18400C920C1 /* M2Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M2Tile.m; path = "Sprite Kit/M2Tile.m"; sourceTree = "<group>"; };
 		24C4515918D6DC4A0001FCFD /* M2Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Cell.h; sourceTree = "<group>"; };
 		24C4515A18D6DC4A0001FCFD /* M2Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Cell.m; sourceTree = "<group>"; };
 		24C4515C18D6DC740001FCFD /* M2Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Grid.h; sourceTree = "<group>"; };
@@ -103,9 +100,6 @@
 		24C4516F18DFF10B0001FCFD /* M2ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ScoreView.m; sourceTree = "<group>"; };
 		24C4517F18E265390001FCFD /* M2Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Overlay.h; sourceTree = "<group>"; };
 		24C4518018E265390001FCFD /* M2Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Overlay.m; sourceTree = "<group>"; };
-		D97B327B1C1A225900877096 /* M2SkillzLegacyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M2SkillzLegacyDelegate.h; path = Skillz/M2SkillzLegacyDelegate.h; sourceTree = "<group>"; };
-		D97B327C1C1A225900877096 /* M2SkillzLegacyDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M2SkillzLegacyDelegate.m; path = Skillz/M2SkillzLegacyDelegate.m; sourceTree = "<group>"; };
-		D97B327E1C1A23A300877096 /* Skillz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Skillz.framework; path = Skillz/Skillz.framework; sourceTree = "<group>"; };
 		D97B328D1C1A32F800877096 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -172,8 +166,11 @@
 			children = (
 				2443DC6618D662CA00C920C1 /* M2AppDelegate.h */,
 				2443DC6718D662CA00C920C1 /* M2AppDelegate.m */,
+				2443DCA418D66CCC00C920C1 /* M2ViewController.h */,
+				2443DCA518D66CCC00C920C1 /* M2ViewController.m */,
+				2443DCAD18D6C18400C920C1 /* M2Tile.h */,
+				2443DCAE18D6C18400C920C1 /* M2Tile.m */,
 				2443DC6918D662CA00C920C1 /* Main.storyboard */,
-				D97B327A1C1A221700877096 /* Skillz */,
 				2443DC9C18D6645800C920C1 /* Appearance */,
 				2443DC9D18D6645800C920C1 /* Controller */,
 				24C4516018DABABE0001FCFD /* Global */,
@@ -224,8 +221,6 @@
 				24C4515D18D6DC740001FCFD /* M2Grid.m */,
 				2443DC9518D663FC00C920C1 /* M2Scene.h */,
 				2443DC9618D663FC00C920C1 /* M2Scene.m */,
-				2443DCAD18D6C18400C920C1 /* M2Tile.h */,
-				2443DCAE18D6C18400C920C1 /* M2Tile.m */,
 			);
 			path = "Sprite Kit";
 			sourceTree = "<group>";
@@ -251,8 +246,6 @@
 		2443DC9D18D6645800C920C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2443DCA418D66CCC00C920C1 /* M2ViewController.h */,
-				2443DCA518D66CCC00C920C1 /* M2ViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,16 +271,6 @@
 				24C4518018E265390001FCFD /* M2Overlay.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D97B327A1C1A221700877096 /* Skillz */ = {
-			isa = PBXGroup;
-			children = (
-				D97B327B1C1A225900877096 /* M2SkillzLegacyDelegate.h */,
-				D97B327C1C1A225900877096 /* M2SkillzLegacyDelegate.m */,
-				D97B327E1C1A23A300877096 /* Skillz.framework */,
-			);
-			name = Skillz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,7 +403,6 @@
 				2443DCAF18D6C18400C920C1 /* M2Tile.m in Sources */,
 				24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */,
 				2443DCA318D6649500C920C1 /* M2Theme.m in Sources */,
-				D97B327D1C1A225900877096 /* M2SkillzLegacyDelegate.m in Sources */,
 				24C4516418DABABE0001FCFD /* M2GlobalState.m in Sources */,
 				2443DC6818D662CA00C920C1 /* M2AppDelegate.m in Sources */,
 				2443DC9B18D663FC00C920C1 /* M2GameManager.m in Sources */,
@@ -557,6 +539,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
 				INFOPLIST_FILE = "m2048/m2048-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -587,6 +570,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
 				INFOPLIST_FILE = "m2048/m2048-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",

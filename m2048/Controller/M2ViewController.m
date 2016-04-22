@@ -12,7 +12,6 @@
 #import "M2ScoreView.h"
 #import "M2Overlay.h"
 #import "M2GridView.h"
-#import "M2SkillzLegacyDelegate.h"
 
 @interface M2ViewController ()
 
@@ -24,7 +23,7 @@
 @property (nonatomic, weak) IBOutlet M2ScoreView *bestView;
 @property (nonatomic, weak) IBOutlet M2Overlay *overlay;
 @property (nonatomic, weak) IBOutlet UIImageView *overlayBackground;
-@property (nonatomic, strong) NSTimer *skillzTimer;
+@property (nonatomic, strong) NSTimer *gameTimer;
 @property (nonatomic, strong) M2Scene *scene;
 
 @end
@@ -34,7 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupGameState];
+}
 
+- (void)setupGameState
+{
     [self updateState];
 
     self.bestView.score.text = [NSString stringWithFormat:@"%ld", (long)[Settings integerForKey:@"Best Score"]];
@@ -58,10 +61,6 @@
     [skView presentScene:scene];
     [self updateScore:0];
 
-    if ([M2SkillzLegacyDelegate canLoadSkillz]) {
-        [M2SkillzLegacyDelegate launchSkillz];
-    }
-
     [self.timerLabel setHidden:YES];
 
     self.scene = scene;
@@ -73,12 +72,12 @@
     [self.timerLabel setText:@":90"];
     [self.timerLabel setHidden:NO];
 
-    [self.skillzTimer invalidate];
-    self.skillzTimer = [NSTimer scheduledTimerWithTimeInterval:1
-                                                        target:self
-                                                      selector:@selector(updateCountdown)
-                                                      userInfo:nil
-                                                       repeats:YES];
+    [self.gameTimer invalidate];
+    self.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                      target:self
+                                                    selector:@selector(updateCountdown)
+                                                    userInfo:nil
+                                                     repeats:YES];
     [self.scene startNewGame];
 }
 
@@ -86,8 +85,8 @@
 {
     NSInteger currentTime = [[self.timerLabel.text substringFromIndex:1] integerValue];
     if (currentTime == 0) {
-        [self.skillzTimer invalidate];
-        self.skillzTimer = nil;
+        [self.gameTimer invalidate];
+        self.gameTimer = nil;
 
         [self endGame:YES];
     } else {
@@ -136,9 +135,6 @@
 - (void)updateScore:(NSInteger)score
 {
     self.scoreView.score.text = [NSString stringWithFormat:@"%ld", (long)score];
-    if ([M2SkillzLegacyDelegate isTournamentInProgress]) {
-        [M2SkillzLegacyDelegate updatePlayersCurrentScore:@(score)];
-    }
     if ([Settings integerForKey:@"Best Score"] < score) {
         [Settings setInteger:score forKey:@"Best Score"];
         self.bestView.score.text = [NSString stringWithFormat:@"%ld", (long)score];
@@ -152,34 +148,6 @@
     ((SKView *)self.view).paused = YES;
 }
 
-
-- (IBAction)restart:(id)sender
-{
-    if ([M2SkillzLegacyDelegate isTournamentInProgress]) {
-        UIAlertView *alertForfeit = [[UIAlertView alloc] initWithTitle:@"Are you sure you want to forfeit?"
-                                                               message:@""
-                                                              delegate:self
-                                                     cancelButtonTitle:@"Yes"
-                                                     otherButtonTitles:@"No", nil];
-        [alertForfeit show];
-    } else {
-        [self hideOverlay];
-        [self updateScore:0];
-        [self.scene startNewGame];
-    }
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (!buttonIndex) {
-        NSLog(@"Yes was selected.");
-        [M2SkillzLegacyDelegate notifyPlayerAbortWithCompletion:^(){
-            NSLog(@"Player is forfeiting the game.");
-        }];
-    } else {
-        NSLog(@"No was selected.");
-    }
-}
 
 
 - (IBAction)keepPlaying:(id)sender
@@ -199,48 +167,6 @@
     }
 }
 
-
-- (void)endGame:(BOOL)won
-{
-    if([M2SkillzLegacyDelegate isTournamentInProgress]) {
-        [self.timerLabel setHidden:YES];
-        [M2SkillzLegacyDelegate displayTournamentResultsWithScore:@([self.scoreView.score.text integerValue])
-                                                   withCompletion:^{
-                                                       NSLog(@"Reporting score to Skillz...");
-                                                   }];
-    } else {
-        self.overlay.hidden = NO;
-        self.overlay.alpha = 0;
-        self.overlayBackground.hidden = NO;
-        self.overlayBackground.alpha = 0;
-
-        if (!won) {
-            self.overlay.keepPlaying.hidden = YES;
-            self.overlay.message.text = @"Game Over";
-        } else {
-            self.overlay.keepPlaying.hidden = NO;
-            self.overlay.message.text = @"You Win!";
-        }
-
-        // Fake the overlay background as a mask on the board.
-        self.overlayBackground.image = [M2GridView gridImageWithOverlay];
-
-        // Center the overlay in the board.
-        CGFloat verticalOffset = [[UIScreen mainScreen] bounds].size.height - GSTATE.verticalOffset;
-        NSInteger side = GSTATE.dimension * (GSTATE.tileSize + GSTATE.borderWidth) + GSTATE.borderWidth;
-        self.overlay.center = CGPointMake(GSTATE.horizontalOffset + side / 2, verticalOffset - side / 2);
-
-        [UIView animateWithDuration:0.5 delay:1.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self.overlay.alpha = 1;
-            self.overlayBackground.alpha = 1;
-        } completion:^(BOOL finished) {
-            // Freeze the current game.
-            ((SKView *)self.view).paused = YES;
-        }];
-    }
-}
-
-
 - (void)hideOverlay
 {
     ((SKView *)self.view).paused = NO;
@@ -255,11 +181,36 @@
     }
 }
 
-
-- (void)didReceiveMemoryWarning
+- (void)endGame:(BOOL)won
 {
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+    self.overlay.hidden = NO;
+    self.overlay.alpha = 0;
+    self.overlayBackground.hidden = NO;
+    self.overlayBackground.alpha = 0;
+
+    if (!won) {
+        self.overlay.keepPlaying.hidden = YES;
+        self.overlay.message.text = @"Game Over";
+    } else {
+        self.overlay.keepPlaying.hidden = NO;
+        self.overlay.message.text = @"You Win!";
+    }
+
+    // Fake the overlay background as a mask on the board.
+    self.overlayBackground.image = [M2GridView gridImageWithOverlay];
+
+    // Center the overlay in the board.
+    CGFloat verticalOffset = [[UIScreen mainScreen] bounds].size.height - GSTATE.verticalOffset;
+    NSInteger side = GSTATE.dimension * (GSTATE.tileSize + GSTATE.borderWidth) + GSTATE.borderWidth;
+    self.overlay.center = CGPointMake(GSTATE.horizontalOffset + side / 2, verticalOffset - side / 2);
+
+    [UIView animateWithDuration:0.5 delay:1.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.overlay.alpha = 1;
+        self.overlayBackground.alpha = 1;
+    } completion:^(BOOL finished) {
+        // Freeze the current game.
+        ((SKView *)self.view).paused = YES;
+    }];
 }
 
 @end
