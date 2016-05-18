@@ -43,13 +43,9 @@
   self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:16];
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
+- (NSNumber *)currentScore
+{
+    return @([self.score.text integerValue]);
+}
 
 @end

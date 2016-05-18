@@ -13,6 +13,8 @@
 #import "M2Overlay.h"
 #import "M2GridView.h"
 
+#import <Skillz/Skillz.h>
+
 @interface M2ViewController ()
 
 @property (nonatomic, weak) IBOutlet UIButton *restartButton;
@@ -181,7 +183,7 @@
     }
 }
 
-- (void)endGame:(BOOL)won
+- (void)cleanupUIForGameCompletion:(BOOL)won
 {
     self.overlay.hidden = NO;
     self.overlay.alpha = 0;
@@ -210,6 +212,14 @@
     } completion:^(BOOL finished) {
         // Freeze the current game.
         ((SKView *)self.view).paused = YES;
+    }];
+}
+
+- (void)endGame:(BOOL)won
+{
+    NSNumber *playerScore = self.scoreView.currentScore;
+    [[Skillz skillzInstance] displayTournamentResultsWithScore:playerScore withCompletion:^{
+        [self cleanupUIForGameCompletion:won];
     }];
 }
 

@@ -1,0 +1,12 @@
+/* Class = "UILabel"; text = "Don't show this again"; ObjectID = "4WJ-E6-X2R"; */
+"4WJ-E6-X2R.text" = "不再显示此内容";
+
+/* Class = "UILabel"; text = "Prizes Awarded"; ObjectID = "Ifa-K4-eV7"; */
+"Ifa-K4-eV7.text" = "已颁奖";
+
+/* Class = "UILabel"; text = "How to Win"; ObjectID = "Pvs-LI-cVf"; */
+"Pvs-LI-cVf.text" = "如何赢取";
+
+/* Class = "UIButton"; normalTitle = "OK, I'M READY"; ObjectID = "ZJo-hR-BBK"; */
+"ZJo-hR-BBK.normalTitle" = "好，我准备好了";
+

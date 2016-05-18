@@ -16,4 +16,7 @@
 /** Updates the appearance of subviews and itself. */
 - (void)updateAppearance;
 
+/** Sends User's Current Score **/
+- (NSNumber *)currentScore;
+
 @end

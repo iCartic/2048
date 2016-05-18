@@ -32,7 +32,9 @@
 		24C4516818DD64A90001FCFD /* M2GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516718DD64A90001FCFD /* M2GridView.m */; };
 		24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516F18DFF10B0001FCFD /* M2ScoreView.m */; };
 		24C4518118E265390001FCFD /* M2Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4518018E265390001FCFD /* M2Overlay.m */; };
-		D97B328E1C1A32F800877096 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B328D1C1A32F800877096 /* PassKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D9BF16F11CCACAF00069AB5E /* Skillz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BF16F01CCACAF00069AB5E /* Skillz.framework */; };
+		D9BF16F21CCACB110069AB5E /* Skillz.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9BF16F01CCACAF00069AB5E /* Skillz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9BF16F31CCAD04B0069AB5E /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B328D1C1A32F800877096 /* PassKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D9BF16F21CCACB110069AB5E /* Skillz.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		24C4517F18E265390001FCFD /* M2Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Overlay.h; sourceTree = "<group>"; };
 		24C4518018E265390001FCFD /* M2Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Overlay.m; sourceTree = "<group>"; };
 		D97B328D1C1A32F800877096 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		D9BF16F01CCACAF00069AB5E /* Skillz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Skillz.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97B328E1C1A32F800877096 /* PassKit.framework in Frameworks */,
+				D9BF16F31CCAD04B0069AB5E /* PassKit.framework in Frameworks */,
 				2443DC5818D662CA00C920C1 /* CoreGraphics.framework in Frameworks */,
 				2443DC5A18D662CA00C920C1 /* UIKit.framework in Frameworks */,
+				D9BF16F11CCACAF00069AB5E /* Skillz.framework in Frameworks */,
 				2443DC5C18D662CA00C920C1 /* SpriteKit.framework in Frameworks */,
 				2443DC5618D662CA00C920C1 /* Foundation.framework in Frameworks */,
 			);
@@ -164,6 +169,7 @@
 		2443DC5D18D662CA00C920C1 /* m2048 */ = {
 			isa = PBXGroup;
 			children = (
+				D9BF16F01CCACAF00069AB5E /* Skillz.framework */,
 				2443DC6618D662CA00C920C1 /* M2AppDelegate.h */,
 				2443DC6718D662CA00C920C1 /* M2AppDelegate.m */,
 				2443DCA418D66CCC00C920C1 /* M2ViewController.h */,
@@ -535,19 +541,13 @@
 					"$(inherited)",
 					"/Users/elizabethrenn/Desktop/sdk_ios_7.1.28/SkillzSDK-iOS.embeddedframework",
 					"$(PROJECT_DIR)/m2048/Skillz",
+					"$(PROJECT_DIR)/m2048",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
 				INFOPLIST_FILE = "m2048/m2048-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"-lz",
-					"-lsqlite3",
-					"-lxml2",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skillz.2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -566,19 +566,13 @@
 					"$(inherited)",
 					"/Users/elizabethrenn/Desktop/sdk_ios_7.1.28/SkillzSDK-iOS.embeddedframework",
 					"$(PROJECT_DIR)/m2048/Skillz",
+					"$(PROJECT_DIR)/m2048",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "m2048/m2048-Prefix.pch";
 				INFOPLIST_FILE = "m2048/m2048-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"-lz",
-					"-lsqlite3",
-					"-lxml2",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skillz.2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

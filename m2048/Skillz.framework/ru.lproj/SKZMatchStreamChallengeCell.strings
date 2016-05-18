@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "Wants a Rematch!"; ObjectID = "0lR-41-RNR"; */
+"0lR-41-RNR.text" = "Хочет Матч-Реванш!";
+
+/* Class = "UILabel"; text = "DECLINE"; ObjectID = "bVH-mU-lpd"; */
+"bVH-mU-lpd.text" = "ОТКЛОНИТЬ";
+
+/* Class = "UILabel"; text = "ACCEPT"; ObjectID = "hOU-eZ-KJk"; */
+"hOU-eZ-KJk.text" = "ПРИНЯТЬ";
+
