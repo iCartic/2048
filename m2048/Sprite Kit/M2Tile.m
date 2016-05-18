@@ -10,7 +10,6 @@
 
 #import "M2Tile.h"
 #import "M2Cell.h"
-#import <Skillz/Skillz.h>
 
 typedef void (^M2Block)();
 
@@ -30,11 +29,10 @@ typedef void (^M2Block)();
 
 + (NSInteger)getRandomNumber:(NSInteger)max
 {
-    if ([[Skillz skillzInstance] tournamentIsInProgress]) {
-        return [Skillz getRandomNumberWithMin:0 andMax:max];
-    } else {
-        return arc4random_uniform(max);
-    }
+    /*
+     Implement Skillz Random
+     */
+    return arc4random_uniform(max);
 }
 
 + (M2Tile *)insertNewTileToCell:(M2Cell *)cell {

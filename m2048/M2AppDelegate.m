@@ -8,9 +8,8 @@
 
 #import "M2AppDelegate.h"
 #import "M2ViewController.h"
-#import <Skillz/Skillz.h>
 
-@interface M2AppDelegate () <SkillzDelegate>
+@interface M2AppDelegate ()
 
 @end
 
@@ -18,12 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[Skillz skillzInstance] initWithGameId:@"1494"
-                                forDelegate:self
-                            withEnvironment:SkillzSandbox
-                                  allowExit:NO];
-
-    [[Skillz skillzInstance] launchSkillz];
+    //Launch instantly into Skillz
 
     return YES;
 }
@@ -40,15 +34,10 @@
 
 #pragma mark Skillz Delegate
 
-- (SkillzOrientation)preferredSkillzInterfaceOrientation
-{
-    return SkillzPortrait;
-}
+/*
 
-- (void)tournamentWillBegin:(NSDictionary *)gameParameters
-              withMatchInfo:(SKZMatchInfo *)matchInfo
-{
-    [[self gameViewController] startNewGame];
-}
+ Implement Skillz Delegate
+
+ */
 
 @end

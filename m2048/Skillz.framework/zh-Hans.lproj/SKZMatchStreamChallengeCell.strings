@@ -1,9 +1,0 @@
-/* Class = "UILabel"; text = "Wants a Rematch!"; ObjectID = "0lR-41-RNR"; */
-"0lR-41-RNR.text" = "想要重赛！";
-
-/* Class = "UILabel"; text = "DECLINE"; ObjectID = "bVH-mU-lpd"; */
-"bVH-mU-lpd.text" = "拒绝";
-
-/* Class = "UILabel"; text = "ACCEPT"; ObjectID = "hOU-eZ-KJk"; */
-"hOU-eZ-KJk.text" = "接受";
-

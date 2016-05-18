@@ -13,8 +13,6 @@
 #import "M2Overlay.h"
 #import "M2GridView.h"
 
-#import <Skillz/Skillz.h>
-
 @interface M2ViewController ()
 
 @property (nonatomic, weak) IBOutlet UIButton *restartButton;
@@ -217,10 +215,9 @@
 
 - (void)endGame:(BOOL)won
 {
-    NSNumber *playerScore = self.scoreView.currentScore;
-    [[Skillz skillzInstance] displayTournamentResultsWithScore:playerScore withCompletion:^{
-        [self cleanupUIForGameCompletion:won];
-    }];
+    /*
+     Implement Skillz display tournament results.
+     */
 }
 
 @end
