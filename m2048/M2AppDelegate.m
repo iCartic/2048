@@ -7,12 +7,31 @@
 //
 
 #import "M2AppDelegate.h"
+#import "M2ViewController.h"
+#import <Skillz/SkillzInstance.h>
 
 @implementation M2AppDelegate
 
+- (void)tournamentWillBegin:(NSDictionary *)gameParameters withMatchInfo:(SKZMatchInfo *)matchInfo
+{
+    M2ViewController *viewController = (M2ViewController*)self.window.rootViewController;
+    [viewController startNewGame];
+}
+
+- (void)skillzWillExit
+{
+    // Optional. This method is called when the Skillz UI is exiting,
+    // usually via from the Skillz UI's sidebar menu.
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  return YES;
+    [[Skillz skillzInstance] initWithGameId:@"5465"
+                             forDelegate:self
+                             withEnvironment:SkillzSandbox
+                             allowExit:NO];
+
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -40,6 +59,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window
+{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
 @end

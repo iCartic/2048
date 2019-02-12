@@ -12,7 +12,7 @@
 @interface M2ViewController : UIViewController
 
 - (void)updateScore:(NSInteger)score;
-
+- (void)startNewGame;
 - (void)endGame:(BOOL)won;
 
 @end

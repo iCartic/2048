@@ -14,6 +14,8 @@
 #import "M2Overlay.h"
 #import "M2GridView.h"
 
+#import <Skillz/Skillz.h>
+
 @implementation M2ViewController {
   IBOutlet UIButton *_forfeitButton;
   IBOutlet UILabel *_targetScore;
@@ -29,32 +31,33 @@
 
 - (void)viewDidLoad
 {
-  [super viewDidLoad];
-  
-  [self updateState];
-  
-  _bestView.score.text = [NSString stringWithFormat:@"%ld", (long)[Settings integerForKey:@"Best Score"]];
-  
-  _forfeitButton.layer.cornerRadius = [GSTATE cornerRadius];
-  _forfeitButton.layer.masksToBounds = YES;
-  
-  _overlay.hidden = YES;
-  _overlayBackground.hidden = YES;
-  
-  // Configure the view.
-  SKView * skView = (SKView *)self.view;
-  
-  // Create and configure the scene.
-  M2Scene * scene = [M2Scene sceneWithSize:skView.bounds.size];
-  scene.scaleMode = SKSceneScaleModeAspectFill;
-  
-  // Present the scene.
-  [skView presentScene:scene];
-  [self updateScore:0];
-  [scene startNewGame];
-  
-  _scene = scene;
-  _scene.controller = self;
+    [super viewDidLoad];
+
+    [self updateState];
+
+    _bestView.score.text = [NSString stringWithFormat:@"%ld", (long)[Settings integerForKey:@"Best Score"]];
+
+    _forfeitButton.layer.cornerRadius = [GSTATE cornerRadius];
+    _forfeitButton.layer.masksToBounds = YES;
+
+    _overlay.hidden = YES;
+    _overlayBackground.hidden = YES;
+
+    // Configure the view.
+    SKView * skView = (SKView *)self.view;
+
+    // Create and configure the scene.
+    M2Scene * scene = [M2Scene sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+
+    // Present the scene.
+    [skView presentScene:scene];
+    [self updateScore:0];
+
+    _scene = scene;
+    _scene.controller = self;
+    
+    [[Skillz skillzInstance] launchSkillz];
 }
 
 
@@ -96,11 +99,15 @@
 
 - (void)updateScore:(NSInteger)score
 {
-  _scoreView.score.text = [NSString stringWithFormat:@"%ld", (long)score];
-  if ([Settings integerForKey:@"Best Score"] < score) {
-    [Settings setInteger:score forKey:@"Best Score"];
-    _bestView.score.text = [NSString stringWithFormat:@"%ld", (long)score];
-  }
+    _scoreView.score.text = [NSString stringWithFormat:@"%ld", (long)score];
+    if ([Settings integerForKey:@"Best Score"] < score) {
+        [Settings setInteger:score forKey:@"Best Score"];
+        _bestView.score.text = [NSString stringWithFormat:@"%ld", (long)score];
+    }
+    
+    if ([[Skillz skillzInstance] tournamentIsInProgress]) {
+        [[Skillz skillzInstance] updatePlayersCurrentScore:@(score)];
+    }
 }
 
 
@@ -113,9 +120,36 @@
 
 - (IBAction)forfeitMatch:(id)sender
 {
-  [self hideOverlay];
-  [self updateScore:0];
-  [_scene startNewGame];
+    [self hideOverlay];
+    [self updateScore:0];
+    
+    if (![[Skillz skillzInstance] tournamentIsInProgress]) {
+        [self->_scene startNewGame];
+        return;
+    }
+    
+    UIAlertController *abortAlertController = [UIAlertController alertControllerWithTitle:@"Forfeit Match?"
+                                                                 message:@"A match is in progress. Are you sure you want to forfeit the match?"
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Yes"
+                                              style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction* action)
+    {
+        [[Skillz skillzInstance] notifyPlayerAbortWithCompletion:^(void)
+        {
+            NSLog(@"The user forfeited the match.");
+        }];
+    }];
+    
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:^(UIAlertAction* action)
+    {
+        NSLog(@"Forfeit canceled, continuing the current match.");
+    }];
+    
+    [abortAlertController addAction:yesAction];
+    [abortAlertController addAction:noAction];
+    [self presentViewController:abortAlertController animated:YES completion:nil];
 }
 
 
@@ -136,6 +170,10 @@
   }
 }
 
+- (void)startNewGame
+{
+    [_scene startNewGame];
+}
 
 - (void)endGame:(BOOL)won
 {
@@ -166,6 +204,14 @@
   } completion:^(BOOL finished) {
     // Freeze the current game.
     ((SKView *)self.view).paused = YES;
+      
+      if ([[Skillz skillzInstance] tournamentIsInProgress]) {
+          [[Skillz skillzInstance] displayTournamentResultsWithScore:@([self->_scoreView.score.text integerValue])
+                                   withCompletion:^(void)
+          {
+              NSLog(@"The match has ended, and the user's final score was reported.");
+          }];
+      }
   }];
 }
 
