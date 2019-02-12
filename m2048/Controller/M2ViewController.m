@@ -7,7 +7,6 @@
 //
 
 #import "M2ViewController.h"
-#import "M2SettingsViewController.h"
 
 #import "M2Scene.h"
 #import "M2GameManager.h"
@@ -16,8 +15,7 @@
 #import "M2GridView.h"
 
 @implementation M2ViewController {
-  IBOutlet UIButton *_restartButton;
-  IBOutlet UIButton *_settingsButton;
+  IBOutlet UIButton *_forfeitButton;
   IBOutlet UILabel *_targetScore;
   IBOutlet UILabel *_subtitle;
   IBOutlet M2ScoreView *_scoreView;
@@ -37,11 +35,8 @@
   
   _bestView.score.text = [NSString stringWithFormat:@"%ld", (long)[Settings integerForKey:@"Best Score"]];
   
-  _restartButton.layer.cornerRadius = [GSTATE cornerRadius];
-  _restartButton.layer.masksToBounds = YES;
-  
-  _settingsButton.layer.cornerRadius = [GSTATE cornerRadius];
-  _settingsButton.layer.masksToBounds = YES;
+  _forfeitButton.layer.cornerRadius = [GSTATE cornerRadius];
+  _forfeitButton.layer.masksToBounds = YES;
   
   _overlay.hidden = YES;
   _overlayBackground.hidden = YES;
@@ -68,12 +63,9 @@
   [_scoreView updateAppearance];
   [_bestView updateAppearance];
   
-  _restartButton.backgroundColor = [GSTATE buttonColor];
-  _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
-  
-  _settingsButton.backgroundColor = [GSTATE buttonColor];
-  _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
-  
+  _forfeitButton.backgroundColor = [GSTATE buttonColor];
+  _forfeitButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
+   
   _targetScore.textColor = [GSTATE buttonColor];
   
   long target = [GSTATE valueForLevel:GSTATE.winningLevel];
@@ -119,7 +111,7 @@
 }
 
 
-- (IBAction)restart:(id)sender
+- (IBAction)forfeitMatch:(id)sender
 {
   [self hideOverlay];
   [self updateScore:0];
