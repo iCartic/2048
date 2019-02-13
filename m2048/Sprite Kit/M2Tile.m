@@ -7,6 +7,7 @@
 //
 
 #include <stdlib.h>
+#include <Skillz/Skillz.h>
 
 #import "M2Tile.h"
 #import "M2Cell.h"
@@ -64,8 +65,16 @@ typedef void (^M2Block)(void);
     // For Fibonacci game, which is way harder than 2048 IMO, 40 seems to be the easiest number.
     // 90 definitely won't work, as we need approximately equal number of 2 and 3 to make the
     // game remotely makes sense.
-    if (GSTATE.gameType == M2GameTypeFibonacci) self.level = arc4random_uniform(100) < 40 ? 1 : 2;
-    else self.level = arc4random_uniform(100) < 95 ? 1 : 2;
+      const NSUInteger randomInt = [[Skillz skillzInstance] tournamentIsInProgress]
+        ? ([Skillz getRandomNumberWithMin:0 andMax:100])
+        : (NSUInteger)arc4random_uniform(100);
+      
+      if (GSTATE.gameType == M2GameTypeFibonacci) {
+          self.level = randomInt < 40 ? 1 : 2;
+      }
+      else {
+          self.level = randomInt < 95 ? 1 : 2;
+      };
     
     [self refreshValue];
   }
